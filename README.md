@@ -31,6 +31,6 @@ After you get the Rails application up and running, you'll find a rake task call
 
 I built Wordsy in a hurry, in order to attempt to help my dad, during a very stressful time. There are several things I didn't do. Some of them are super obvious.
 
-* Admin Interface - Wordsy needs a pssword-protected admin Ui for adding/deleting words. I just ran it on a private server and bookmarked URLs to save time.
+* Admin Interface - Wordsy needs a pssword-protected admin UI for adding/deleting words. I just ran it on a private server and bookmarked URLs to save time.
 * Test Coverage - There is none.
 * A female voice option - Obviously my dad isn't female, so I didn't do this. It would be nice to build voice selection into an admin UI, but for now you can easily change it on line 34 of `entry.rb`. I recommend Amy.
