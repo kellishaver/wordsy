@@ -1,0 +1,4 @@
+<h1><%= @entry.word %></h1>
+<br><br>
+
+<%= link_to "Delete This Word", entry_path(@entry), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>

@@ -1,0 +1,25 @@
+<% if notice %>
+  <div class="flash-notice"><%= notice %></div>
+<% end %>
+
+<div id="filters" class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= link_to "ALL", "", class: "filter-link active", data: { letter: "all" } %>
+    <% ("A".."Z").to_a.each do |letter| %>
+      <%= link_to letter, "", class: "filter-link", data: { letter: letter } %>
+    <% end %>
+  </div>
+</div>
+<div class="row" id="word-list">
+  <% Entry.all.each do |e| %>
+    <div class="col-md-3 entry-wrapper" data-starts-with="<%= e.word.first %>">
+      <%= link_to "/words/#{e.word}.mp3", class: "entry" do %>
+        <div class="well"><%= e.word %></div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div class="hidden">
+  <audio id="player"></audio>
+</div>
